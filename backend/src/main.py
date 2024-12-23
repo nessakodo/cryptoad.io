@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="CryptoSynth API")
+app = FastAPI(title="Cryptoad API")
 
 # Configure CORS
 app.add_middleware(
@@ -14,4 +14,4 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "CryptoSynth API is running"}
+    return {"message": "Cryptoad API is running"}

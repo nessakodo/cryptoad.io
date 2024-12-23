@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 # Create .env file
 cat > .env << EOL
-MONGODB_URI=mongodb://localhost:27017/cryptoad
+MONGODB_URI=mongodb://localhost:27017/cryptosynth
 WEB3_PROVIDER=https://mainnet.infura.io/v3/YOUR-PROJECT-ID
 COINGECKO_API_KEY=your_api_key_here
 JWT_SECRET=your_jwt_secret_here
