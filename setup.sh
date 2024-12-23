@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Create project directory structure
-mkdir -p CryptoSynth/{backend,frontend,scripts,config}
-cd CryptoSynth
+mkdir -p cryptoad/{backend,frontend,scripts,config}
+cd cryptoad
 
 # Create virtual environment and activate it
 python -m venv venv
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 # Create .env file
 cat > .env << EOL
-MONGODB_URI=mongodb://localhost:27017/cryptosynth
+MONGODB_URI=mongodb://localhost:27017/cryptoad
 WEB3_PROVIDER=https://mainnet.infura.io/v3/YOUR-PROJECT-ID
 COINGECKO_API_KEY=your_api_key_here
 JWT_SECRET=your_jwt_secret_here
@@ -50,7 +50,7 @@ cat > src/main.py << EOL
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="CryptoSynth API")
+app = FastAPI(title="cryptoad API")
 
 # Configure CORS
 app.add_middleware(
@@ -63,7 +63,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "CryptoSynth API is running"}
+    return {"message": "cryptoad API is running"}
 EOL
 
 # Set up frontend (React)
